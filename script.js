@@ -59,10 +59,32 @@ window.setStatus = (button, status) => {
 
     updateDashboard();
 };
+
+//delete jobs
 window.deleteCard = (button) => {
     const card = button.closest(".job-card");
     card.remove();
     updateDashboard();
 };
+
+//tab changes
+window.filterTabs = (type) => {
+    currentfilter = type;
+   
+    ['all', 'interview', 'rejected'].forEach(t => {
+        const btn = document.getElementById(`tab-${t}`);
+        if (btn) {
+            if (t === type) {
+                btn.className = "px-4 py-2 bg-[#3B82F6] text-white rounded-md uppercase text-xs font-bold transition-all";
+            } else {
+                btn.className = "px-4 py-2 bg-[#E2E8F0] text-[#323B49] rounded-md uppercase text-xs font-bold transition-all";
+            }
+        }
+    });
+
+    updateDashboard();
+};
+
+updateDashboard();
 
 
