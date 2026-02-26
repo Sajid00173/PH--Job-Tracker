@@ -36,6 +36,7 @@ function updateDashboard() {
     }
 }
 
+//interview/rejected buttons
 window.setStatus = (button, status) => {
     const card = button.closest(".job-card");
     const currentStatus = card.getAttribute("data-status");
@@ -56,6 +57,11 @@ window.setStatus = (button, status) => {
         rejBtn.classList.add("bg-[#EF4444]", "text-white");
     }
 
+    updateDashboard();
+};
+window.deleteCard = (button) => {
+    const card = button.closest(".job-card");
+    card.remove();
     updateDashboard();
 };
 
