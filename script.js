@@ -45,6 +45,17 @@ window.setStatus = (button, status) => {
     const newStatus = currentStatus === status ? "none" : status;
     card.setAttribute("data-status", newStatus);
 
+//applied badge
+    if (badge) {
+        if (newStatus === "none") {
+            badge.innerText = "NOT APPLIED";
+            badge.className = "apply-status-badge text-[10px] font-bold text-[#002C5C] mb-2 uppercase px-2 py-0.5 bg-[#EEF4FF] rounded w-fit";
+        } else {
+            badge.innerText = "APPLIED";
+            badge.className = "apply-status-badge text-[10px] font-bold text-emerald-600 mb-2 uppercase px-2 py-0.5 bg-emerald-100 rounded w-fit";
+        }
+    }
+    
     const intBtn = card.querySelector('.btn-interview');
     const rejBtn = card.querySelector('.btn-rejected');
 
