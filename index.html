@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PH Job Tracker</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     
 </head>
 <body class="font-sans bg-slate-50 p-6 md:p-10">
@@ -22,6 +23,164 @@
             </div>
         </div>
     </header>
+
+    <main class="max-w-6xl mx-auto">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-lg font-bold text-[#002C5C]">Available Jobs</h3>
+            <span id="jobs-count" class="text-[#64748B] text-sm">8 jobs</span>
+        </div>
+<!-- available jobs buttons-->
+        <div class="flex gap-2 mb-8">
+            <button class="px-4 py-2 bg-[#3B82F6] text-white rounded-md">All</button>
+            <button class="px-4 py-2 bg-[#E2E8F0] text-[#323B49] rounded-md">Interview</button>
+            <button class="px-4 py-2 bg-[#E2E8F0] text-[#323B49] rounded-md">Rejected</button>
+        </div>
+
+        <div id="jobs-container" class="grid grid-cols-1 gap-5">
+            <div class="job-card bg-white p-6 rounded-xl border border-[#F1F2F4] relative" data-status="none">
+            <button class="absolute top-4 right-4 text-slate-300 hover:text-red-500"><i class="fa-regular fa-trash-can"></i></button>  
+            <h4 class="font-bold text-[#002C5C]">Mobile First Corp<h4>
+            <p class=" text-sm text-[#64748B]">React Native Developer</p>
+            <div class="flex gap-3 text-xs text-[#64748B] my-3"><span>Remote</span> • <span>Full-time</span> • <span>$130,000-$175,000</span></div>
+<!-- apply status badge -->
+            <div class="apply-status-badge text-[10px] font-bold text-[#002C5C] mb-2 uppercase px-2 py-0.5 bg-[#EEF4FF] rounded w-fit">
+            NOT APPLIED
+            </div>
+            <p class="text-sm text-[#323B49] mb-4">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+<!-- interview/rejected buttons -->
+            <div class="flex gap-2">
+                <button class="btn-interview px-4 py-1 text-xs font-semibold rounded border border-[#10B981] text-[#10B981] hover:bg-green-300 uppercase">Interview</button>
+                <button class="btn-rejected px-4 py-1 text-xs font-semibold rounded border border-[#EF4444] text-[#EF4444] hover:bg-red-300 uppercase">Rejected</button>
+            </div>
+        </div>
+
+        <div id="jobs-container" class="grid grid-cols-1 gap-5">
+            <div class="job-card bg-white p-6 rounded-xl border border-[#F1F2F4] relative" data-status="none">
+            <button class="absolute top-4 right-4 text-slate-300 hover:text-red-500"><i class="fa-regular fa-trash-can"></i></button>  
+            <h4 class="font-bold text-[#002C5C]">WebFlow Agency<h4>
+            <p class=" text-sm text-[#64748B]">Web Designer & Developer</p>
+            <div class="flex gap-3 text-xs text-[#64748B] my-3"><span>Los Angeles, CA</span> • <span>Part-time</span> • <span>$80,000- $120,000</span></div>
+<!-- apply status badge -->
+            <div class="apply-status-badge text-[10px] font-bold text-[#002C5C] mb-2 uppercase px-2 py-0.5 bg-[#EEF4FF] rounded w-fit">
+            NOT APPLIED
+            </div>
+            <p class="text-sm text-[#323B49] mb-4">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+<!-- interview/rejected buttons -->
+            <div class="flex gap-2">
+                <button class="btn-interview px-4 py-1 text-xs font-semibold rounded border border-[#10B981] text-[#10B981] hover:bg-green-300 uppercase">Interview</button>
+                <button class="btn-rejected px-4 py-1 text-xs font-semibold rounded border border-[#EF4444] text-[#EF4444] hover:bg-red-300 uppercase">Rejected</button>
+            </div>
+        </div>
+
+        <div id="jobs-container" class="grid grid-cols-1 gap-5">
+            <div class="job-card bg-white p-6 rounded-xl border border-[#F1F2F4] relative" data-status="none">
+            <button class="absolute top-4 right-4 text-slate-300 hover:text-red-500"><i class="fa-regular fa-trash-can"></i></button>  
+            <h4 class="font-bold text-[#002C5C]">DataViz Solutions<h4>
+            <p class=" text-sm text-[#64748B]">Data Visualization Specialist</p>
+            <div class="flex gap-3 text-xs text-[#64748B] my-3"><span>Boston, MA</span> • <span>Full-time</span> • <span>$125,000-$165,00</span></div>
+<!-- apply status badge -->
+            <div class="apply-status-badge text-[10px] font-bold text-[#002C5C] mb-2 uppercase px-2 py-0.5 bg-[#EEF4FF] rounded w-fit">
+            NOT APPLIED
+            </div>
+            <p class="text-sm text-[#323B49] mb-4">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
+</p>
+<!-- interview/rejected buttons -->
+            <div class="flex gap-2">
+                <button class="btn-interview px-4 py-1 text-xs font-semibold rounded border border-[#10B981] text-[#10B981] hover:bg-green-300 uppercase">Interview</button>
+                <button class="btn-rejected px-4 py-1 text-xs font-semibold rounded border border-[#EF4444] text-[#EF4444] hover:bg-red-300 uppercase">Rejected</button>
+            </div>
+        </div>
+
+        <div id="jobs-container" class="grid grid-cols-1 gap-5">
+            <div class="job-card bg-white p-6 rounded-xl border border-[#F1F2F4] relative" data-status="none">
+            <button class="absolute top-4 right-4 text-slate-300 hover:text-red-500"><i class="fa-regular fa-trash-can"></i></button>  
+            <h4 class="font-bold text-[#002C5C]">CloudFirst Inc<h4>
+            <p class=" text-sm text-[#64748B]">Backend Developer</p>
+            <div class="flex gap-3 text-xs text-[#64748B] my-3"><span>Seattle, WA</span> • <span>Full-time</span> • <span>$140,000-$190,000</span></div>
+<!-- apply status badge -->
+            <div class="apply-status-badge text-[10px] font-bold text-[#002C5C] mb-2 uppercase px-2 py-0.5 bg-[#EEF4FF] rounded w-fit">
+            NOT APPLIED
+            </div>
+            <p class="text-sm text-[#323B49] mb-4"><br></p>
+<!-- interview/rejected buttons -->
+            <div class="flex gap-2">
+                <button class="btn-interview px-4 py-1 text-xs font-semibold rounded border border-[#10B981] text-[#10B981] hover:bg-green-300 uppercase">Interview</button>
+                <button class="btn-rejected px-4 py-1 text-xs font-semibold rounded border border-[#EF4444] text-[#EF4444] hover:bg-red-300 uppercase">Rejected</button>
+            </div>
+        </div>
+
+        <div id="jobs-container" class="grid grid-cols-1 gap-5">
+            <div class="job-card bg-white p-6 rounded-xl border border-[#F1F2F4] relative" data-status="none">
+            <button class="absolute top-4 right-4 text-slate-300 hover:text-red-500"><i class="fa-regular fa-trash-can"></i></button>  
+            <h4 class="font-bold text-[#002C5C]">Innovation Labs<h4>
+            <p class=" text-sm text-[#64748B]">UI/UX Engineer</p>
+            <div class="flex gap-3 text-xs text-[#64748B] my-3"><span>Austin, TX</span> • <span>Full-time</span> • <span>$110,000-$150,000</span></div>
+<!-- apply status badge -->
+            <div class="apply-status-badge text-[10px] font-bold text-[#002C5C] mb-2 uppercase px-2 py-0.5 bg-[#EEF4FF] rounded w-fit">
+            NOT APPLIED
+            </div>
+            <p class="text-sm text-[#323B49] mb-4">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+<!-- interview/rejected buttons -->
+            <div class="flex gap-2">
+                <button class="btn-interview px-4 py-1 text-xs font-semibold rounded border border-[#10B981] text-[#10B981] hover:bg-green-300 uppercase">Interview</button>
+                <button class="btn-rejected px-4 py-1 text-xs font-semibold rounded border border-[#EF4444] text-[#EF4444] hover:bg-red-300 uppercase">Rejected</button>
+            </div>
+        </div>
+
+        <div id="jobs-container" class="grid grid-cols-1 gap-5">
+            <div class="job-card bg-white p-6 rounded-xl border border-[#F1F2F4] relative" data-status="none">
+            <button class="absolute top-4 right-4 text-slate-300 hover:text-red-500"><i class="fa-regular fa-trash-can"></i></button>  
+            <h4 class="font-bold text-[#002C5C]">MegaCorp Solutions<h4>
+            <p class=" text-sm text-[#64748B]">JavaScript Developer</p>
+            <div class="flex gap-3 text-xs text-[#64748B] my-3"><span>New York, NY</span> • <span>Full-time</span> • <span>$130,000-$170,000</span></div>
+<!-- apply status badge -->
+            <div class="apply-status-badge text-[10px] font-bold text-[#002C5C] mb-2 uppercase px-2 py-0.5 bg-[#EEF4FF] rounded w-fit">
+            NOT APPLIED
+            </div>
+            <p class="text-sm text-[#323B49] mb-4">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+<!-- interview/rejected buttons -->
+            <div class="flex gap-2">
+                <button class="btn-interview px-4 py-1 text-xs font-semibold rounded border border-[#10B981] text-[#10B981] hover:bg-green-300 uppercase">Interview</button>
+                <button class="btn-rejected px-4 py-1 text-xs font-semibold rounded border border-[#EF4444] text-[#EF4444] hover:bg-red-300 uppercase">Rejected</button>
+            </div>
+        </div>
+
+        <div id="jobs-container" class="grid grid-cols-1 gap-5">
+            <div class="job-card bg-white p-6 rounded-xl border border-[#F1F2F4] relative" data-status="none">
+            <button class="absolute top-4 right-4 text-slate-300 hover:text-red-500"><i class="fa-regular fa-trash-can"></i></button>  
+            <h4 class="font-bold text-[#002C5C]">StartupXYZ<h4>
+            <p class=" text-sm text-[#64748B]">Full Stack Engineer</p>
+            <div class="flex gap-3 text-xs text-[#64748B] my-3"><span>Remote</span> • <span>Full-time</span> • <span>$120,000-$160,000</span></div>
+<!-- apply status badge -->
+            <div class="apply-status-badge text-[10px] font-bold text-[#002C5C] mb-2 uppercase px-2 py-0.5 bg-[#EEF4FF] rounded w-fit">
+            NOT APPLIED
+            </div>
+            <p class="text-sm text-[#323B49] mb-4">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+<!-- interview/rejected buttons -->
+            <div class="flex gap-2">
+                <button class="btn-interview px-4 py-1 text-xs font-semibold rounded border border-[#10B981] text-[#10B981] hover:bg-green-300 uppercase">Interview</button>
+                <button class="btn-rejected px-4 py-1 text-xs font-semibold rounded border border-[#EF4444] text-[#EF4444] hover:bg-red-300 uppercase">Rejected</button>
+            </div>
+        </div>
+
+        <div id="jobs-container" class="grid grid-cols-1 gap-5">
+            <div class="job-card bg-white p-6 rounded-xl border border-[#F1F2F4] relative" data-status="none">
+            <button class="absolute top-4 right-4 text-slate-300 hover:text-red-500"><i class="fa-regular fa-trash-can"></i></button>  
+            <h4 class="font-bold text-[#002C5C]">TechCorp Industries<h4>
+            <p class=" text-sm text-[#64748B]">Senior Frontend Developer</p>
+            <div class="flex gap-3 text-xs text-[#64748B] my-3"><span>San Francisco, CA</span> • <span>Full-time</span> • <span>$130,000-$175,000</span></div>
+<!-- apply status badge -->
+            <div class="apply-status-badge text-[10px] font-bold text-[#002C5C] mb-2 uppercase px-2 py-0.5 bg-[#EEF4FF] rounded w-fit">
+            NOT APPLIED
+            </div>
+            <p class="text-sm text-[#323B49] mb-4">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+<!-- interview/rejected buttons -->
+            <div class="flex gap-2">
+                <button class="btn-interview px-4 py-1 text-xs font-semibold rounded border border-[#10B981] text-[#10B981] hover:bg-green-300 uppercase">Interview</button>
+                <button class="btn-rejected px-4 py-1 text-xs font-semibold rounded border border-[#EF4444] text-[#EF4444] hover:bg-red-300 uppercase">Rejected</button>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
 
